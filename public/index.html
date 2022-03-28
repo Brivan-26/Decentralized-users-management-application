@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapp CRUD</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+        input {
+            padding: 10px 20px;
+            border: 0;
+            outline: 0;
+            border:1px solid rgba(0, 0, 255, 0.651);
+            border-radius: 5px;
+        }
+        button {
+            border:0;
+            background: rgba(0, 0, 255, 0.651);
+            color:white;
+            padding:10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap:2rem;
+        }
+        #usersOneUser {
+            display: flex;
+            justify-content: space-between;
+        }
+        .success {
+            background:rgba(0, 128, 0, 0.603);
+            width:100%;
+            padding:10px;
+            color:rgba(0, 128, 0, 0.89);
+            border-radius: 5px;
+        }
+        .error {
+            background:rgba(255, 0, 0, 0.658);
+            width:100%;
+            padding:10px;
+            color:rgba(255, 0, 0, 0.863);
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div>
+            <h2>Create a User:</h2>
+            <form id="createUserForm">
+                <input type="text" placeholder="Enter the name..." required>
+                <button type="submit">Create</button>
+            </form>
+            <p id="createUserSuccess"></p>
+            <p id="createUserError"></p>
+        </div>
+        <div>
+            <h2>Get User:</h2>
+            <form id="getUserForm">
+                <input type="number" placeholder="Enter the ID" required>
+                <button type="submit">Get</button>
+            </form>
+            <p id="getUserSuccess"></p>
+            <p id="getUserError"></p>
+            <p id="getUserResult"></p>
+        </div>
+
+        <div>
+            <h2>Update User:</h2>
+            <form id="updateUserForm">
+                <input type="number" placeholder="Enther the ID..." required>
+                <input type="text" placeholder="Enter the new name" required>
+                <button type="submit">Update</button>
+            </form>
+            <p id="updateMessageSuccess"></p>
+            <p id="updateMessageError"></p>
+        </div>
+        <div id="deleteUser">
+            <h2>Delete User:</h2>
+            <form id="deleteUserForm">
+                <input type="number" placeholder="Enter the ID..." required>
+                <button type="submit">Delete</button>
+            </form>
+            <p id="deleteMessageSuccess"></p>
+            <p id="deleteMessageError"></p>
+        </div>
+    </div>
+
+
+    <script src="web3.js"></script>
+    <script src="bundle.js"></script>
+    
+</body>
+</html>
